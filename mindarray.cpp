@@ -15,6 +15,8 @@ int getindexnu();
 
 void getarraynu(int b[], int &indexnu);
 
+float mean(int b[], int indexnu);
+
 
 //--------------------------
 //micro
@@ -40,6 +42,8 @@ int main(int argc, char** argv)
 
         //Seperatpr
     cout<<endl<<endl<<"------------------------------"<<endl<<endl;
+
+    cout<<"Avarage of number of array = "<<mean(a,n);
     
 getch();
 }
@@ -77,3 +81,20 @@ for(int i=0; i<indexnu; ++i)
 }
 
 //-----------------------------------------
+
+//Function for calculate avg
+
+float mean(int b[], int indexnu)
+{
+    float avg = 0;
+    int sum = 0;
+
+    for(int j=0; j<indexnu; ++j)
+    {
+        sum = sum + b[j];
+    }
+
+    avg = sum/indexnu;
+
+    return avg;
+}
