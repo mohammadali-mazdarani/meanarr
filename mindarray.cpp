@@ -1,6 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <math.h>
+#include <iomanip>
 using namespace std;
 /* run this program using the console pauser or add your own getch, system(
 ) or input loop */
@@ -42,6 +43,8 @@ int main(int argc, char** argv)
 
         //Seperatpr
     cout<<endl<<endl<<"------------------------------"<<endl<<endl;
+
+    cout<<fixed<<setprecision(4);
 
     cout<<"Avarage of number of array = "<<mean(a,n);
     
@@ -86,8 +89,9 @@ for(int i=0; i<indexnu; ++i)
 
 float mean(int b[], int indexnu)
 {
+
     float avg = 0;
-    int sum = 0;
+    float sum = 0;
 
     for(int j=0; j<indexnu; ++j)
     {
@@ -97,4 +101,5 @@ float mean(int b[], int indexnu)
     avg = sum/indexnu;
 
     return avg;
+
 }
