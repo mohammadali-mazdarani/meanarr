@@ -12,6 +12,10 @@ using namespace std;
 //prototype
 
 int getindexnu();
+
+void getarraynu(int b[], int &indexnu);
+
+
 //--------------------------
 //micro
 //---------------------
@@ -26,6 +30,15 @@ int main(int argc, char** argv)
     n = getindexnu();
 
     //Seperatpr
+    cout<<endl<<endl<<"------------------------------"<<endl<<endl;
+
+        //Declar Array
+    int a[n];
+
+    //Get number of array
+    getarraynu(a,n);
+
+        //Seperatpr
     cout<<endl<<endl<<"------------------------------"<<endl<<endl;
     
 getch();
@@ -48,3 +61,19 @@ int getindexnu()
 }
 
 //---------------------------------------------
+
+//Function for get array number 
+
+void getarraynu(int b[], int &indexnu)
+{
+
+for(int i=0; i<indexnu; ++i)
+{
+    cout<<"["<<i<<"] = ";
+    cin>>b[i];
+    cout<<endl;
+}
+
+}
+
+//-----------------------------------------
