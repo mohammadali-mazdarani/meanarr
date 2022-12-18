@@ -1,1 +1,1 @@
-# meanarr
+# This program clac mean of array 
