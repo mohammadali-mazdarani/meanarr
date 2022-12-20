@@ -12,16 +12,19 @@ using namespace std;
 */
 //prototype
 
-<<<<<<< HEAD
-=======
+
+
 int getindexnu();
 
 void getarraynu(int b[], int &indexnu);
 
 float mean(int b[], int indexnu);
 
+void bubblesort(int b[], int indexnu);
 
->>>>>>> dev2
+void middle(int b[], int indexnu);
+
+
 //--------------------------
 //micro
 //---------------------
@@ -50,6 +53,19 @@ int main(int argc, char** argv)
     cout<<fixed<<setprecision(4);
 
     cout<<"Avarage of number of array = "<<mean(a,n);
+
+            //Seperatpr
+    cout<<endl<<endl<<"------------------------------"<<endl<<endl;
+
+
+//Sort array
+    bubblesort(a,n);
+
+//Seperatpr
+    cout<<endl<<endl<<"------------------------------"<<endl<<endl;
+
+//find middle array
+middle(a,n);
     
 getch();
 }
@@ -57,8 +73,7 @@ getch();
 //--------------------------
 //functions
 
-<<<<<<< HEAD
-=======
+
 //Function for get number of index array
 
 int getindexnu()
@@ -108,4 +123,53 @@ float mean(int b[], int indexnu)
     return avg;
 
 }
->>>>>>> dev2
+
+//-------------------------------------------
+
+//Function for sert with bubble sort and show array
+
+void bubblesort(int b[], int indexnu)
+{
+
+//Sort array
+
+    for(int j=0; j<indexnu; ++j)
+    {
+
+    for (int i=0; i<indexnu; ++i)
+    {
+
+        int temp=0;
+        if(b[i] > b[i+1])
+        {
+
+            temp = b[i + 1];
+            b[i + 1] = b[i];
+            b[i] = temp;
+
+        }
+    }
+    }
+
+//Show array sort
+
+    for(int k=0; k<indexnu; ++k)
+    {
+        cout<<"["<<k<<"] = "<<b[k]<<endl;
+    }
+
+
+}
+
+//------------------------------------------------
+
+//Function for middle of array
+
+void middle(int b[], int indexnu)
+{
+    
+    cout<<"Enter middle of array = "<<b[indexnu/2];
+}
+
+
+
