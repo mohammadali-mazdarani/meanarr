@@ -12,8 +12,6 @@ using namespace std;
 */
 //prototype
 
-<<<<<<< HEAD
-=======
 int getindexnu();
 
 void getarraynu(int b[], int &indexnu);
@@ -21,7 +19,7 @@ void getarraynu(int b[], int &indexnu);
 float mean(int b[], int indexnu);
 
 
->>>>>>> dev2
+
 //--------------------------
 //micro
 //---------------------
@@ -57,8 +55,7 @@ getch();
 //--------------------------
 //functions
 
-<<<<<<< HEAD
-=======
+
 //Function for get number of index array
 
 int getindexnu()
@@ -108,4 +105,4 @@ float mean(int b[], int indexnu)
     return avg;
 
 }
->>>>>>> dev2
+
