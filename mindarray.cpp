@@ -23,6 +23,10 @@ void bubblesort(int b[], int indexnu);
 
 void middle(int b[], int indexnu);
 
+int max(int b[],int indexnu);
+
+void mod(int b[], int indexnu, int max1);
+
 
 
 
@@ -67,6 +71,20 @@ int main(int argc, char** argv)
 
 //find middle array
 middle(a,n);
+
+//Seperatpr
+    cout<<endl<<endl<<"------------------------------"<<endl<<endl;
+
+//find maximum number
+
+int max2=max(a,n);
+
+cout<<"Max of number = "<<max(a,n);
+
+//Seperatpr
+    cout<<endl<<endl<<"------------------------------"<<endl<<endl;
+
+    mod(a,n,max2);
     
 getch();
 }
@@ -177,20 +195,79 @@ void middle(int b[], int indexnu)
 //Function for find max of array
 int max(int b[],int indexnu)
 {
-    int max1=0
-    for(int i=0; i<indexnu; ++i)
+    int max1=b[0];
+    for(int i=1; i<indexnu; ++i)
     {
-        
+        if (b[0]<b[i])
+        max1 = b[i];
+
     }
+
+    return max1;
 }
+
 
 //-------------------------------------------------
 
 //Function for find mod
 
-void mod(int b[], int indexnu)
+void mod(int b[], int indexnu, int max1)
 {
-    
+
+
+//Array for putting up value  
+
+int c[(max1+1)] = {0};
+
+//Loop for putting of repeat
+
+for(int i=0; i<=max1; ++i) 
+{
+
+    for(int j=0; j<indexnu; ++j)
+    {
+        if(i == b[j])
+        {
+        ++c[i];
+        }
+    }
+
+}
  
+
+for(int m=0; m<=max1; ++m)
+{
+
+    cout<<"["<<m<<"] = "<<c[m]<<endl;
+}
+ //Find max of repeat
+
+ int max3 = c[0];
+
+ for(int k=1; k<=max1; ++k)
+ {
+
+    if(c[k] > max3)
+    max3 = c[k];
+
+ }
+
+ //Seperatpr
+    cout<<endl<<endl<<"------------------------------"<<endl<<endl;
+
+
+//Show max of repeat
+
+ cout<<" Mod of array = "<<max3;
+
+for(int m=0; m<=max1; ++m)
+{
+
+    if (max3 == c[m])
+    cout<<endl<<"Index of array = "<<m;
+}
+
+
+
 }
 
