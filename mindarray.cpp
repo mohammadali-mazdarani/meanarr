@@ -173,6 +173,24 @@ void middle(int b[], int indexnu)
     cout<<"Enter middle of array = "<<b[indexnu/2];
 }
 
+//------------------------------------------------
+//Function for find max of array
+int max(int b[],int indexnu)
+{
+    int max1=0
+    for(int i=0; i<indexnu; ++i)
+    {
+        
+    }
+}
 
+//-------------------------------------------------
 
+//Function for find mod
+
+void mod(int b[], int indexnu)
+{
+    
+ 
+}
 
